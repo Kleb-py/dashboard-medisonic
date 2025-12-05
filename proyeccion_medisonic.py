@@ -43,7 +43,7 @@ cats_selec = st.sidebar.multiselect("Categorías a incluir", cats_disponibles, d
 df = df_raw[(df_raw['AÑO'].isin(anos_selec)) & (df_raw['CATEGORIA'].isin(cats_selec))]
 
 # --- 3. TÍTULO Y PESTAÑAS ---
-st.title("📊 Dashboard - Proyección 2026")
+st.title("📊 Proyección 2026 - Medisonic Perú")
 tab1, tab2, tab3 = st.tabs(["📈 Proyección & Estrategia", "🔍 Auditoría de Datos", "📋 Tabla Detallada"])
 
 # --- PESTAÑA 1: PROYECCIÓN ---
@@ -124,3 +124,4 @@ with tab3:
     st.subheader("Base de Datos Procesada")
 
     st.dataframe(df, use_container_width=True)
+
